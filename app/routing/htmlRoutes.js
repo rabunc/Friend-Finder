@@ -3,14 +3,14 @@ var express = require("express")
 
 module.exports = function(app) {
 
-app.use(express.static(__dirname + 'app/public'))
+// app.use(express.static(__dirname + '/public'))
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "home.html"));
+  res.sendFile(path.join(__dirname, "/../public/home.html"));
 });
 
 app.get("/survey", function (req, res) {
-  res.sendFile(path.join(__dirname, "survey.html"));
+  res.sendFile(path.join(__dirname, "/../public/survey.html"));
 });
 
 }
